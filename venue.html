@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue & Location - IWSSIP 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for this page */
+        .venue-img { 
+            width: 100%; 
+            height: 350px; /* Taller images for better view */
+            object-fit: cover; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .venue-img:hover {
+            transform: scale(1.02);
+        }
+        .caption {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+            text-align: center;
+        }
+        .lore-box {
+            background: #fff9f9;
+            padding: 25px;
+            border-left: 4px solid #cc0000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">IWSSIP <span>2026</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="call-for-papers.html">Call for Papers</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="venue.html" class="active">Venue</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Venue & Location</h1>
+    </div>
+
+    <div class="container">
+        
+        <!-- SECTION 1: THE FACULTY -->
+        <div class="grid-2">
+            <div>
+                <h2 style="color: #cc0000;">The Venue: Faculty of Electrical Engineering</h2>
+                <p>IWSSIP 2026 will be hosted by the <strong>Faculty of Electrical Engineering (Fakulteta za elektrotehniko)</strong>, part of the University of Ljubljana.</p>
+                <p>Founded in 1919, the University of Ljubljana is the oldest and largest higher education institution in Slovenia. The Faculty of Electrical Engineering is a leading institution in the region, known for its research in robotics, telecommunications, and biomedical engineering.</p>
+                
+                <div style="background: #f4f4f4; padding: 15px; border-radius: 5px; margin-top: 20px;">
+                    <strong>📍 Address:</strong><br>
+                    Tržaška cesta 25<br>
+                    1000 Ljubljana, Slovenia<br>
+                    <em style="font-size: 0.9rem;">(Accessible via Bus lines 1 and 6 from the city center)</em>
+                </div>
+            </div>
+            <div>
+                <img src="https://fe.uni-lj.si/wp-content/uploads/2025/09/494495024_122109038072839673_3083782886075652599_n.jpg" alt="Faculty of Electrical Engineering" class="venue-img">
+                <div class="caption">The Main Entrance of the Faculty of Electrical Engineering</div>
+            </div>
+        </div>
+
+        <hr style="margin: 60px 0; border: 0; border-top: 1px solid #eee;">
+
+        <!-- SECTION 2: LORE & CITY -->
+        <h2 style="text-align: center; margin-bottom: 40px;">Discover Ljubljana</h2>
+
+        <div class="grid-2">
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dragons_Bridge%2C_Ljubljana_2.jpg/1280px-Dragons_Bridge%2C_Ljubljana_2.jpg" alt="Dragon Bridge" class="venue-img">
+                <div class="caption">The famous Dragon Bridge (Zmajski most)</div>
+            </div>
+            <div>
+                <h3>The Legend of the Dragon</h3>
+                <p>Ljubljana is often called the "City of Dragons". According to Greek legend, the Argonauts, led by Jason, found a large lake surrounded by marshes between the present-day towns of Vrhnika and Ljubljana.</p>
+                <div class="lore-box">
+                    <p><strong>The Lore:</strong> It is said that Jason struck down a terrible monster in that marsh—a dragon. Today, that dragon has become the symbol of the city, representing power, courage, and greatness. You can see four magnificent copper dragons guarding the famous Dragon Bridge.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-2" style="margin-top: 60px;">
+            <div>
+                <h3>A City of Culture</h3>
+                <p>Ljubljana is a green capital with a relaxed Mediterranean vibe. The city center is pedestrian-only, characterized by the unique architecture of <strong>Jože Plečnik</strong>, who designed the Triple Bridge, the Central Market, and the river embankments.</p>
+                <p>In June, the city comes alive with outdoor cafes along the Ljubljanica River. It is the perfect time to visit the Ljubljana Castle, which offers a panoramic view of the city and the distant Alps.</p>
+            </div>
+            <div>
+                <img src="https://www.visitljubljana.com/assets/POI/Triple-Bridge-photo-Dunja-Wedam__ScaleMaxWidthWzE5MDBd.jpg" alt="Triple Bridge" class="venue-img">
+                <div class="caption">The Triple Bridge and the Pink Franciscan Church</div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: MAP -->
+        <h3 style="margin-top: 60px;">Location Map</h3>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2769.605342426368!2d14.489178315555136!3d46.04892497911226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652d6275811c7d%3A0x6b725c2763c87602!2sFakulteta%20za%20elektrotehniko%2C%20Univerza%20v%20Ljubljani!5e0!3m2!1sen!2ssi!4v1625561234567!5m2!1sen!2ssi" 
+            width="100%" height="400" style="border:0; border-radius: 8px; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy">
+        </iframe>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 IWSSIP | University of Ljubljana</p>
+    </footer>
+
+</body>
+</html>
