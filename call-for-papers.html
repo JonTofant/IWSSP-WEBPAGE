@@ -5,32 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call for Papers - IWSSIP 2026</title>
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons (Needed for the Word/Code icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Small tweak to make lists look tighter */
-        .topic-list li {
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-            border-bottom: 1px solid #f0f0f0;
-            padding-bottom: 2px;
-        }
-        .instruction-box {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        /* --- EXISTING STYLES --- */
+        .topic-list li { margin-bottom: 5px; font-size: 0.95rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 2px; }
+        .step-number { display: inline-block; background: #cc0000; color: white; width: 30px; height: 30px; border-radius: 50%; text-align: center; line-height: 30px; margin-right: 10px; font-weight: bold; }
+        
+        /* --- NEW STYLES FOR TEMPLATES & SUBMISSION --- */
+        .intro-text {
+            color: #555;
             margin-bottom: 30px;
         }
-        .step-number {
+
+        /* The Template Rows (Word/Latex) */
+        .template-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #333; /* Default border color */
+        }
+        
+        /* Specific Colors for Word vs Latex */
+        .template-row.word { border-left-color: #0056b3; } /* Blue for Word */
+        .template-row.latex { border-left-color: #007833; } /* Green for Latex */
+
+        .template-info h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .template-row.word h4 { color: #0056b3; }
+        .template-row.latex h4 { color: #007833; }
+
+        .template-info p {
+            margin: 5px 0 0 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Outline Buttons */
+        .btn-outline {
+            background: transparent;
+            border: 2px solid;
+            padding: 10px 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
             display: inline-block;
-            background: #cc0000;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
+        }
+        
+        .btn-outline.red-border {
+            border-color: #cc0000;
+            color: #cc0000;
+        }
+        .btn-outline.red-border:hover { background: #cc0000; color: white; text-decoration: none; }
+
+        .btn-outline.green-border {
+            border-color: #007833;
+            color: #007833;
+        }
+        .btn-outline.green-border:hover { background: #007833; color: white; text-decoration: none; }
+
+        /* The "Ready to Submit" Pink Box */
+        .submission-zone {
+            background-color: #fff5f5;
+            border: 1px solid #ffebeb;
+            border-radius: 8px;
             text-align: center;
-            line-height: 30px;
-            margin-right: 10px;
+            padding: 50px 20px;
+            margin-top: 40px;
+        }
+        
+        .submission-zone h3 {
+            margin-top: 0;
+            color: #222;
+            font-size: 1.5rem;
+        }
+
+        .submit-btn-large {
+            background-color: #cc0000;
+            color: white;
+            padding: 15px 30px;
             font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 20px 0 10px;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .submit-btn-large:hover { background-color: #a00; color: white; text-decoration: none; transform: translateY(-2px); }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .template-row { flex-direction: column; text-align: center; gap: 15px; }
+            .template-info h4 { justify-content: center; }
         }
     </style>
 </head>
@@ -72,7 +152,6 @@
                         <li>Design and implementation of signal processing systems</li>
                     </ul>
                 </div>
-
                 <div class="card" style="margin-bottom: 30px;">
                     <h3>Image and Video Processing</h3>
                     <ul class="topic-list">
@@ -83,7 +162,6 @@
                         <li>Medical image processing</li>
                     </ul>
                 </div>
-
                 <div class="card" style="margin-bottom: 30px;">
                     <h3>Machine Learning</h3>
                     <ul class="topic-list">
@@ -94,7 +172,6 @@
                         <li>Pattern recognition</li>
                     </ul>
                 </div>
-
                 <div class="card" style="margin-bottom: 30px;">
                     <h3>Speech and Audio Processing</h3>
                     <ul class="topic-list">
@@ -119,7 +196,6 @@
                         <li>Internet of things</li>
                     </ul>
                 </div>
-
                 <div class="card" style="margin-bottom: 30px;">
                     <h3>Network</h3>
                     <ul class="topic-list">
@@ -130,7 +206,6 @@
                         <li>Industrial networks</li>
                     </ul>
                 </div>
-
                 <div class="card" style="margin-bottom: 30px;">
                     <h3>Multimedia</h3>
                     <ul class="topic-list">
@@ -141,7 +216,6 @@
                         <li>Multimedia systems and services</li>
                     </ul>
                 </div>
-
                 <div class="card" style="margin-bottom: 30px;">
                     <h3>Remote Sensing and Radars</h3>
                     <ul class="topic-list">
@@ -157,59 +231,55 @@
 
         <hr style="margin: 50px 0; border: 0; border-top: 1px solid #eee;">
 
-        <!-- --- SUBMISSION INSTRUCTIONS --- -->
+        <!-- --- NEW SUBMISSION & DOWNLOADS SECTION --- -->
         <h2>Instructions for Paper Submission</h2>
         
-        <div class="instruction-box">
-            <h3><span class="step-number">1</span> Submit Your Paper</h3>
-            <p>Authors are kindly invited to submit unpublished and original papers that are not under consideration for publication at other conferences or journals. The papers are required to contain original scientific, expert or applied results of the authors. The authors should submit papers that present applications of theoretical methods in solving engineering problems, new devices and/or systems, results of own experimental research, new approaches or solutions to existing problems, etc. All submitted papers are subject to review, but the authors are responsible for the originality and quality of their papers.</p>
-            
-            <p><strong>Papers must be submitted electronically by March 1, 2026 using EasyChair.</strong> Each paper will be blind reviewed by at least two independent reviewers and evaluated with special attention to its originality, significance, and clarity.</p>
-            
-            <div style="margin-top: 20px;">
-                <a href="https://easychair.org/account/signin" target="_blank" class="btn">Go to EasyChair Submission</a>
+        <p class="intro-text">
+            Prospective authors are invited to submit full papers (4 pages standard, up to 6 pages max) including results, figures, and references. Papers must be original and not previously published.
+        </p>
+
+        <!-- Microsoft Word Template Box -->
+        <div class="template-row word">
+            <div class="template-info">
+                <h4><i class="fas fa-file-word"></i> Microsoft Word Template</h4>
+                <p>Official IEEE Conference Template (DOCX)</p>
             </div>
+            <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx" class="btn-outline red-border">Download Word</a>
         </div>
 
-        <div class="instruction-box">
-            <h3><span class="step-number">2</span> Camera-Ready Paper Submission</h3>
-            
-            <h4>Revise Your Paper</h4>
-            <p>Please read the reviews of your paper and follow the reviewers’ recommendations for revising it and preparing the camera-ready version according to the <strong>IWSSIP 2026 template</strong> (A4 format, up to five pages including figures and references). When you are done with the revision, please print out your camera-ready paper and carefully proofread it.</p>
-            
-            <!-- Templates Buttons -->
-            <div style="margin-bottom: 20px;">
-                <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/conference-template-a4.docx" class="btn" style="padding: 5px 15px; font-size: 0.8rem; background: #555;">Download Word Template</a>
-                <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/pubs/conference-latex-template_10-17-19.zip" class="btn" style="padding: 5px 15px; font-size: 0.8rem; background: #555;">Download LaTeX Template</a>
+        <!-- LaTeX Template Box -->
+        <div class="template-row latex">
+            <div class="template-info">
+                <h4><i class="fas fa-code"></i> LaTeX Template</h4>
+                <p>Official IEEE Conference Template (ZIP)</p>
             </div>
+            <a href="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/pubs/conference-latex-template_10-17-19.zip" class="btn-outline green-border">Download LaTeX</a>
+        </div>
 
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+        <!-- Submission Zone -->
+        <div class="submission-zone">
+            <h3>Ready to Submit?</h3>
+            <p style="color: #666;">All papers must be submitted electronically via the EasyChair conference system.</p>
+            
+            <a href="https://easychair.org/account/signin" target="_blank" class="submit-btn-large">
+                <i class="fas fa-upload"></i> Go to Submission System
+            </a>
+            
+            <p style="font-size: 0.9rem; color: #999; margin-top: 10px;">(You will need an EasyChair account)</p>
+        </div>
 
-            <h4>IEEE PDF eXpress</h4>
-            <p>All conference articles must adhere to the IEEE Xplore PDF specification for compatibility. Therefore, authors are asked to carefully study IEEE PDF requirements and convert their camera-ready papers to PDF based on these requirements.</p>
+        <!-- --- SUBMISSION DETAILS TEXT --- -->
+        <div style="margin-top: 50px;">
+            <h3>Detailed Guidelines</h3>
+            
+            <p><span class="step-number">1</span> <strong>Review Process:</strong> Each paper will be blind reviewed by at least two independent reviewers and evaluated with special attention to its originality, significance, and clarity.</p>
 
-            <p><strong>Creating your PDF eXpress Account (only for camera ready papers):</strong></p>
-            <ul>
-                <li>1. Log in to the <a href="https://ieee-pdf-express.org/" target="_blank" style="font-weight:bold;">IEEE PDF eXpress Plus site</a>.</li>
-                <li>2. <strong>First-time users:</strong> Select the “New Users – Click Here” link.</li>
-                <li>3. Enter the following:
-                    <ul style="margin-left: 20px; list-style: circle;">
-                        <li><strong>TBD2026xp</strong> for the Conference ID (To be updated)</li>
-                        <li>Your email address</li>
-                        <li>A password</li>
-                    </ul>
-                </li>
-                <li>4. An Online confirmation will be displayed and an email confirmation will be sent verifying your account setup.</li>
-            </ul>
-            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;"><em>Previous users of PDF eXpress or IEEE PDF eXpress Plus need to use the same password that was used for previous conferences, but should enter the new Conference ID. Please verify that your contact information remains valid.</em></p>
-
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-
-            <h4>Final Submission</h4>
-            <p>To submit your final paper, please go to EasyChair, log in as an author, and upload your camera-ready paper. If you experience any problems during the upload process of your paper on EasyChair please contact <strong>Iwssip2026@um.si</strong>.</p>
-
-            <h4>IEEE Copyright Form</h4>
-            <p>After uploading your camera-ready paper, you will need to submit your copyright form using the EasyChair electronic copyright mechanism. Please follow the instructions provided on the EasyChair submission page.</p>
+            <p><span class="step-number">2</span> <strong>Camera-Ready Paper:</strong> Please read the reviews of your paper and follow the reviewers’ recommendations for revising it. When you are done with the revision, please print out your camera-ready paper and carefully proofread it.</p>
+            
+            <p><span class="step-number">3</span> <strong>IEEE PDF eXpress:</strong> All conference articles must adhere to the IEEE Xplore PDF specification. 
+            <br><a href="https://ieee-pdf-express.org/" target="_blank" style="color: #cc0000; font-weight: bold; margin-left: 45px;">Go to IEEE PDF eXpress Plus site</a>
+            <br><span style="margin-left: 45px; font-size: 0.9rem; color: #666;">Conference ID: <strong>TBD2026xp</strong> (To be confirmed)</span>
+            </p>
         </div>
 
     </div>
