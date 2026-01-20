@@ -77,7 +77,7 @@ nav a:hover { color: var(--primary); text-decoration: none; }
 }
 
 /* Specific class for the blurred banner */
-.page-header.cfp-banner {
+.page-header.cfp-banner .venue-image .program-banner .registration-banner {
     padding: 100px 20px; /* Taller banner */
     background: #222;    /* Fallback color */
     border-bottom: none;
@@ -116,6 +116,21 @@ nav a:hover { color: var(--primary); text-decoration: none; }
     text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
 
+/* Make sure the text stays on top and pops */
+.page-header.venue-image h1 {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    
+    /* High contrast text shadow for "Pop" */
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+
 /* The background layer that gets blurred */
 .page-header.venue-image::before {
     content: "";
@@ -123,7 +138,7 @@ nav a:hover { color: var(--primary); text-decoration: none; }
     top: 0; left: 0; right: 0; bottom: 0;
     
     /* YOUR IMAGE HERE */
-    background-image: url('https://www.visitljubljana.com/assets/Fototeka/velika-planina-ana-pogacar__FillWzUwMCwzMzBd.jpg'); 
+    background-image: url('https://www.visitljubljana.com/assets/Fototeka/planina-polje-tomo-jesenicnik__FillWzUwMCwzMzBd.jpg'); 
     
     background-size: cover;
     background-position: center;
@@ -133,6 +148,74 @@ nav a:hover { color: var(--primary); text-decoration: none; }
     transform: scale(1.1); /* Prevents white edges caused by blur */
     z-index: 1;
 }
+
+/* Make sure the text stays on top and pops */
+.page-header.program-banner h1 {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    
+    /* High contrast text shadow for "Pop" */
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* The background layer that gets blurred */
+.page-header.program-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    /* YOUR IMAGE HERE */
+    background-image: url('https://www.visitljubljana.com/assets/Foto-mreza-izbor/Grintovec-2019-Jaka-Ivancic__FillWzUwMCwzMzBd.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    
+    /* Strong Blur and Dark Tint */
+    filter: blur(8px) brightness(0.6); 
+    transform: scale(1.1); /* Prevents white edges caused by blur */
+    z-index: 1;
+}
+
+/* Make sure the text stays on top and pops */
+.page-header.registration-banner h1 {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    
+    /* High contrast text shadow for "Pop" */
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* The background layer that gets blurred */
+.page-header.registration-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    /* YOUR IMAGE HERE */
+    background-image: url('https://www.visitljubljana.com/assets/Fototeka/Zupanova-jama-2019-Staderzen-1__FillWzUwMCwzMzBd.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    
+    /* Strong Blur and Dark Tint */
+    filter: blur(8px) brightness(0.6); 
+    transform: scale(1.1); /* Prevents white edges caused by blur */
+    z-index: 1;
+}
+
+
 
 /* BUTTONS */
 .btn { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; border-radius: 4px; font-weight: bold; }
