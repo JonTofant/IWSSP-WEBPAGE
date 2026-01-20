@@ -65,8 +65,57 @@ nav a:hover { color: var(--primary); text-decoration: none; }
 }
 
 /* PAGE HEADERS (For subpages) */
-.page-header { background: #f4f4f4; padding: 40px 20px; text-align: center; border-bottom: 1px solid #ddd; }
-.page-header h1 { margin: 0; font-size: 2.5rem; }
+/* Keep your existing .page-header as the base */
+/* Keep your existing base style */
+.page-header { 
+    background: #f4f4f4; 
+    padding: 40px 20px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+    position: relative; /* Required for the blur effect */
+    overflow: hidden;    /* Keeps the blur from bleeding out */
+}
+
+/* Specific class for the blurred banner */
+.page-header.cfp-banner {
+    padding: 100px 20px; /* Taller banner */
+    background: #222;    /* Fallback color */
+    border-bottom: none;
+}
+
+/* The background layer that gets blurred */
+.page-header.cfp-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    /* YOUR IMAGE HERE */
+    background-image: url('https://www.visitljubljana.com/assets/Fototeka/velika-planina-ana-pogacar__FillWzUwMCwzMzBd.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    
+    /* Strong Blur and Dark Tint */
+    filter: blur(8px) brightness(0.6); 
+    transform: scale(1.1); /* Prevents white edges caused by blur */
+    z-index: 1;
+}
+
+/* Make sure the text stays on top and pops */
+.page-header.cfp-banner h1 {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0;
+    
+    /* High contrast text shadow for "Pop" */
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+
 
 /* BUTTONS */
 .btn { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; border-radius: 4px; font-weight: bold; }
