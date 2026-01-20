@@ -116,6 +116,23 @@ nav a:hover { color: var(--primary); text-decoration: none; }
     text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
 
+/* The background layer that gets blurred */
+.page-header.venue-image::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    /* YOUR IMAGE HERE */
+    background-image: url('https://www.visitljubljana.com/assets/Fototeka/velika-planina-ana-pogacar__FillWzUwMCwzMzBd.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    
+    /* Strong Blur and Dark Tint */
+    filter: blur(8px) brightness(0.6); 
+    transform: scale(1.1); /* Prevents white edges caused by blur */
+    z-index: 1;
+}
 
 /* BUTTONS */
 .btn { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; border-radius: 4px; font-weight: bold; }
